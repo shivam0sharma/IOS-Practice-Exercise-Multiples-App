@@ -21,23 +21,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chalkboard" translatesAutoresizingMaskIntoConstraints="NO" id="kyf-cU-Lah">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chalkboard" translatesAutoresizingMaskIntoConstraints="NO" id="kyf-cU-Lah" userLabel="Background">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MULTIPLES" translatesAutoresizingMaskIntoConstraints="NO" id="kF5-S8-q14">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MULTIPLES" translatesAutoresizingMaskIntoConstraints="NO" id="kF5-S8-q14" userLabel="Logo">
                                 <rect key="frame" x="35" y="28" width="304" height="89"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="89" id="LYa-Yq-dQO"/>
                                     <constraint firstAttribute="width" constant="304" id="YAe-YB-MPi"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sta-4m-flj">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sta-4m-flj" userLabel="PlayButton">
                                 <rect key="frame" x="85" y="445" width="205" height="202"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="202" id="BOL-bU-Clv"/>
                                     <constraint firstAttribute="width" constant="205" id="HDq-JJ-Bxq"/>
                                 </constraints>
                                 <state key="normal" image="play"/>
+                                <connections>
+                                    <action selector="playButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="H6o-fp-L7y"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="What multiple to add by?" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eEU-T9-8wF">
                                 <rect key="frame" x="70" y="375" width="234" height="45"/>
@@ -59,13 +62,16 @@
                                 <color key="textColor" red="0.99215686270000003" green="0.99215686270000003" blue="0.99215686270000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YRw-cg-7XQ">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YRw-cg-7XQ" userLabel="AddButton">
                                 <rect key="frame" x="82" y="496" width="211" height="101"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="101" id="8Np-it-r1G"/>
                                     <constraint firstAttribute="width" constant="211" id="dYL-Iq-fjh"/>
                                 </constraints>
                                 <state key="normal" image="add"/>
+                                <connections>
+                                    <action selector="addButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sZb-eY-1ci"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -86,6 +92,13 @@
                             <constraint firstAttribute="trailing" secondItem="kyf-cU-Lah" secondAttribute="trailing" id="um1-gf-PRE"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="addButton" destination="YRw-cg-7XQ" id="n6h-Ic-TjU"/>
+                        <outlet property="logo" destination="kF5-S8-q14" id="P0a-Rt-PTl"/>
+                        <outlet property="multipleLabel" destination="c2q-uD-Rvd" id="vou-4z-4Na"/>
+                        <outlet property="multipleTextField" destination="eEU-T9-8wF" id="dSh-qt-do8"/>
+                        <outlet property="playButton" destination="Sta-4m-flj" id="x0h-JE-RP3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
