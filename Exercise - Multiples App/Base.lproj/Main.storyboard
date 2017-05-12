@@ -31,26 +31,15 @@
                                     <constraint firstAttribute="width" constant="304" id="YAe-YB-MPi"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sta-4m-flj" userLabel="PlayButton">
-                                <rect key="frame" x="85" y="445" width="205" height="202"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="202" id="BOL-bU-Clv"/>
-                                    <constraint firstAttribute="width" constant="205" id="HDq-JJ-Bxq"/>
-                                </constraints>
-                                <state key="normal" image="play"/>
-                                <connections>
-                                    <action selector="playButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="H6o-fp-L7y"/>
-                                </connections>
-                            </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="What multiple to add by?" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eEU-T9-8wF">
-                                <rect key="frame" x="70" y="375" width="234" height="45"/>
+                                <rect key="frame" x="70" y="158" width="234" height="45"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="gV7-QQ-07D"/>
-                                    <constraint firstAttribute="width" constant="234" id="vXE-Ld-2Cz"/>
+                                    <constraint firstAttribute="height" constant="45" id="UCu-qI-HmD"/>
+                                    <constraint firstAttribute="width" constant="234" id="g1f-nt-nvA"/>
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Press Add to add!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c2q-uD-Rvd">
                                 <rect key="frame" x="16" y="172" width="343" height="63"/>
@@ -58,7 +47,7 @@
                                     <constraint firstAttribute="height" constant="63" id="3WE-a3-obI"/>
                                     <constraint firstAttribute="width" constant="343" id="PPW-Y8-f8n"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="32"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="38"/>
                                 <color key="textColor" red="0.99215686270000003" green="0.99215686270000003" blue="0.99215686270000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -73,21 +62,32 @@
                                     <action selector="addButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sZb-eY-1ci"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sta-4m-flj" userLabel="PlayButton">
+                                <rect key="frame" x="85" y="223" width="205" height="202"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="202" id="2tk-wf-Gd7"/>
+                                    <constraint firstAttribute="width" constant="205" id="eJi-Xa-u4a"/>
+                                </constraints>
+                                <state key="normal" image="play"/>
+                                <connections>
+                                    <action selector="playButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="H6o-fp-L7y"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="Sta-4m-flj" firstAttribute="top" secondItem="eEU-T9-8wF" secondAttribute="bottom" constant="20" id="8AK-qE-nTf"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="YRw-cg-7XQ" secondAttribute="bottom" constant="70" id="9Af-yG-EzL"/>
+                            <constraint firstItem="Sta-4m-flj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="EsW-cm-7Hx"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="kyf-cU-Lah" secondAttribute="bottom" id="F5O-ZN-bHO"/>
-                            <constraint firstItem="Sta-4m-flj" firstAttribute="top" secondItem="eEU-T9-8wF" secondAttribute="bottom" constant="25" id="LFu-58-ces"/>
                             <constraint firstItem="c2q-uD-Rvd" firstAttribute="top" secondItem="kF5-S8-q14" secondAttribute="bottom" constant="55" id="QbC-aK-7Kf"/>
                             <constraint firstItem="kF5-S8-q14" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="V6s-rs-yTw"/>
-                            <constraint firstItem="Sta-4m-flj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YTz-1o-MQC"/>
                             <constraint firstItem="YRw-cg-7XQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Yuh-BG-XpD"/>
                             <constraint firstItem="kyf-cU-Lah" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="fXQ-XQ-gmC"/>
+                            <constraint firstItem="eEU-T9-8wF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gJG-xT-f6g"/>
                             <constraint firstItem="kyf-cU-Lah" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="iPa-XX-8fw"/>
-                            <constraint firstItem="eEU-T9-8wF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jpL-yF-Etg"/>
                             <constraint firstItem="c2q-uD-Rvd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mMr-zf-sfc"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Sta-4m-flj" secondAttribute="bottom" constant="20" id="tKP-MQ-mvR"/>
+                            <constraint firstItem="eEU-T9-8wF" firstAttribute="top" secondItem="kF5-S8-q14" secondAttribute="bottom" constant="41" id="otb-P8-S1z"/>
                             <constraint firstItem="kF5-S8-q14" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="u89-Ck-ZOW"/>
                             <constraint firstAttribute="trailing" secondItem="kyf-cU-Lah" secondAttribute="trailing" id="um1-gf-PRE"/>
                         </constraints>
